@@ -22,7 +22,10 @@ const reviewSchema = new mongoose.Schema({
         min: 0,
         max: 5
     },
-    reviewText: String,
+    reviewText: {
+        type: String,
+        required: true
+    },
     createdOn: {
         type: Date,
         'default': Date.now
